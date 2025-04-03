@@ -1,0 +1,14 @@
+name: ecs-deploy-prod
+
+on:
+  push:
+    tags:
+      - '*' # This will trigger on any tag
+
+jobs:
+  print-hello:
+    name: Print Hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello Message
+        run: echo "Hello, deployment triggered!"
